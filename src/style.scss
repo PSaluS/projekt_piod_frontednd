@@ -1,68 +1,87 @@
 * {
   body {
     background-color: rgb(83, 215, 255);
+    display: inline-flex;
 
-    table {
-      background-color: #fff;
-      width: auto;
-      tr {
-        padding: 0;
-        margin: 0;
+    #data {
+      table {
+        background-color: #fff;
         width: auto;
-        td {
-          border: 2px solid #000;
+        tr {
           padding: 0;
           margin: 0;
-          width: 40px;
-
-          .id {
-            width: 35px;
-          }
-          .name {
-            width: 200px;
-          }
-          .type {
-            width: 50px;
-          }
-          .total {
-            width: 40px;
-          }
-          .hp {
-            width: 40px;
-          }
-          .attak {
-            width: 40px;
-          }
-          .defence {
-            width: 60px;
-          }
-          .sp_attak {
-            width: 40px;
-          }
-          .sp_defence {
-            width: 50px;
-          }
-          .speed {
-            width: 40px;
-          }
-          .generation {
-            width: 70px;
-            text-align: center;
-          }
-          .legendary {
-            width: 65px;
-          }
-          input {
-            width: available;
-            margin: 0;
+          width: auto;
+          td {
+            border: 2px solid #000;
             padding: 0;
-          }
-          input[type="number"]::-webkit-outer-spin-button,
-          input[type="number"]::-webkit-inner-spin-button {
-            -webkit-appearance: none;
             margin: 0;
+            width: 40px;
+
+            .id {
+              width: 35px;
+            }
+            .name {
+              width: 200px;
+            }
+            .type {
+              width: 50px;
+            }
+            .total {
+              width: 40px;
+            }
+            .hp {
+              width: 40px;
+            }
+            .attak {
+              width: 40px;
+            }
+            .defence {
+              width: 60px;
+            }
+            .sp_attak {
+              width: 40px;
+            }
+            .sp_defence {
+              width: 50px;
+            }
+            .speed {
+              width: 40px;
+            }
+            .generation {
+              width: 70px;
+              text-align: center;
+            }
+            .legendary {
+              width: 65px;
+            }
+            input {
+              width: available;
+              margin: 0;
+              padding: 0;
+            }
+            input[type="number"]::-webkit-outer-spin-button,
+            input[type="number"]::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
           }
         }
+      }
+    }
+    #chart {
+      padding: 15px;
+      position: fixed;
+      max-width: 500px;
+      max-height: 600px;
+      #chartInter {
+        display: inline;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      canvas {
+        background-color: white;
+        border: 2px solid black;
+        padding: 10px;
       }
     }
   }
