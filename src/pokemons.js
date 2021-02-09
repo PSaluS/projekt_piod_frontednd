@@ -30,7 +30,7 @@ export default class Pokemons {
                <button id='GenerationChart'>Generations</button>
                <button id='LegendChart'>Legendarys</button>
             </div>
-            <canvas id="myChart" width="450" height="550"></canvas>`;
+            <canvas id="myChart" calss="ChartP" width="500" height="600"></canvas>`;
             root.setAttribute("style", "left: 950px;");
 
         document.getElementById('typeChart').onclick = ()=> this.typeChart();
@@ -46,19 +46,19 @@ export default class Pokemons {
 
         let newTab= `<table id='table'>
             <tr>
-            <td id="Id" >ID</td>
-            <td id="Name" >Name</td>
-            <td id="Type_1" >Type 1</td>
-            <td id="Type_2" >Type 2</td>
-            <td id="Total" >Total</td>
-            <td id="Hp" >Hp</td>
-            <td id="Attak" >Attak</td>
-            <td id="Defence" >Defence</td>
-            <td id="Sp_Attak" >Sp. Attak</td>
-            <td id="Sp_Defence" >Sp. Defence</td>
-            <td id="Speed" >Speed</td>
-            <td id="Generation" >Generation</td>
-            <td id="Legendary" >Legendary</td>
+            <td id="Id" class='Sort'>ID</td>
+            <td id="Name" class='Sort'>Name</td>
+            <td id="Type_1" class='Sort'>Type 1</td>
+            <td id="Type_2" class='Sort'>Type 2</td>
+            <td id="Total" class='Sort'>Total</td>
+            <td id="Hp" class='Sort'>Hp</td>
+            <td id="Attak" class='Sort'>Attak</td>
+            <td id="Defence" class='Sort'>Defence</td>
+            <td id="Sp_Attak" class='Sort'>Sp. Attak</td>
+            <td id="Sp_Defence" class='Sort'>Sp. Defence</td>
+            <td id="Speed" class='Sort'>Speed</td>
+            <td id="Generation" class='Sort'>Generation</td>
+            <td id="Legendary" class='Sort'>Legendary</td>
             </tr>`;
 
             this.data.forEach((element, index)=>{
@@ -182,8 +182,11 @@ export default class Pokemons {
                     fontSize: 24,
                     fontColor: '#000',
                     text: 'Types Chart'
-                }
-            }
+                },
+                responsive: false
+            },
+            width: 500,
+            height: 600
         });
     }
 
@@ -222,9 +225,13 @@ export default class Pokemons {
                     fontSize: 24,
                     fontColor: '#000',
                     text: 'Generation Chart'
-                }
-            }
-        });
+                },
+                responsive: false
+            },
+            width: 500,
+            height: 600
+        }
+        );
     }
 
     legendaryChart() {
@@ -254,8 +261,11 @@ export default class Pokemons {
                     fontSize: 24,
                     fontColor: '#000',
                     text: 'Legendary Chart'
-                }
-            }
+                },
+                responsive: false
+            },
+            width: 500,
+            height: 600
         });
     }
 
